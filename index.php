@@ -2,8 +2,14 @@
 include"init.php";
 
 
-//$data= DB::table('users')->select()->all();
-$data= DB::table('users')->select()->where();
+$array['username']="Mary1";
+$array['password']="passnig";
+$array['email']="marynig@gmail.com";
+
+User::action()->update_by_id($array,2);
+
+$data = User::action()->get_all();
 
 
+echo "<pre>";
 print_r($data);
